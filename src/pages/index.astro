@@ -166,14 +166,13 @@
 						/>
 						<div class="card-content">
 							<h3 data-i18n="srv_facial_title">
-								Tratamiento Facial Orgánico
+								Facial rejuvenecedor
 							</h3>
 							<p
 								data-i18n="srv_facial_desc"
 								style="margin-bottom: 1.5rem;"
 							>
-								Cuidado profundo de la piel con extractos
-								botánicos que devuelven la luminosidad natural.
+								Tratamiento avanzado que restaura la firmeza y luminosidad de tu piel, reduciendo signos de fatiga y paso del tiempo.
 							</p>
 							<a
 								href="#contacto"
@@ -185,13 +184,12 @@
 					<div class="card service-card">
 						<img src="/images/spa_hero.png" alt="Ritual Zen" />
 						<div class="card-content">
-							<h3 data-i18n="srv_zen_title">Ritual Zen BOHO</h3>
+							<h3 data-i18n="srv_zen_title">Conoterapia</h3>
 							<p
 								data-i18n="srv_zen_desc"
 								style="margin-bottom: 1.5rem;"
 							>
-								Una experiencia completa que incluye
-								exfoliación, envoltura corporal e hidroterapia.
+								Limpieza natural y profunda de oídos con técnica ancestral para mejorar tu audición y bienestar general.
 							</p>
 							<a
 								href="#contacto"
@@ -203,7 +201,7 @@
 				</div>
 				<div class="mt-4" style="margin-top: 3rem;">
 					<a
-						href="#servicios"
+						href="/servicios"
 						class="btn-primary"
 						data-i18n="view_all_services">Ver todos los servicios</a
 					>
@@ -219,10 +217,7 @@
 						Nuestras Instalaciones
 					</h2>
 					<p data-i18n="fac_desc">
-						Hemos cuidado cada detalle para crear un ambiente donde
-						el tiempo se detiene. Disfruta de nuestras cabinas
-						privadas, zona de hidroterapia y sauna de madera
-						natural.
+						Hemos cuidado cada detalle para crear un ambiente donde el tiempo se detiene.
 					</p>
 					<ul class="features-list">
 						<li data-i18n="fac_feat1">
@@ -376,44 +371,46 @@
 						<h3 data-i18n="contact_form_title">
 							Reserva tu momento
 						</h3>
-						<form class="booking-form">
+						<form class="booking-form" id="booking-form">
 							<input
+								id="booking-name"
 								type="text"
 								placeholder="Tu Nombre completo"
 								data-i18n-placeholder="form_name"
 								required
 							/>
 							<input
+								id="booking-email"
 								type="email"
 								placeholder="Correo Electrónico"
 								data-i18n-placeholder="form_email"
-								required
 							/>
 							<input
+								id="booking-phone"
 								type="tel"
 								placeholder="Teléfono"
 								data-i18n-placeholder="form_phone"
-								required
 							/>
-							<select required>
+							<select id="booking-service" required>
 								<option value="" data-i18n="form_service_select"
 									>Selecciona un Servicio</option
 								>
 								<option
-									value="masaje"
+									value="Masaje Relajante"
 									data-i18n="srv_massage_title"
 									>Masaje Relajante</option
 								>
 								<option
-									value="facial"
+									value="Facial Rejuvenecedor"
 									data-i18n="srv_facial_title"
-									>Tratamiento Facial Orgánico</option
+									>Facial rejuvenecedor</option
 								>
-								<option value="ritual" data-i18n="srv_zen_title"
-									>Ritual Zen BOHO</option
+								<option value="Conoterapia" data-i18n="srv_zen_title"
+									>Conoterapia</option
 								>
 							</select>
 							<button
+								id="booking-submit"
 								type="button"
 								class="btn-primary w-full mt-4"
 								data-i18n="form_btn">Solicitar Reserva</button
@@ -547,7 +544,28 @@
 
 		<!-- Floating CTA -->
 		<a href="#contacto" class="floating-cta shadow">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="20"
+				height="20"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="cta-icon"
+				><rect x="3" y="4" width="18" height="18" rx="2" ry="2"
+				></rect><line x1="16" y1="2" x2="16" y2="6"></line><line
+					x1="8"
+					y1="2"
+					x2="8"
+					y2="6"></line><line x1="3" y1="10" x2="21" y2="10"
+				></line></svg
+			>
 			<span data-i18n="floating_cta">Agenda ahora</span>
+		</a>
+
 		</a>
 
 		<!-- Footer -->
@@ -561,7 +579,7 @@
 				</div>
 				<div class="footer-copy">
 					<p data-i18n="footer_copy">
-						&copy; Desarrollado por DevDiazLabs.
+						&copy; Desarrollado por <a href="https://devdiazlabs.com/" target="_blank" class="dev-link">DevDiaz Labs</a>.
 					</p>
 				</div>
 			</div>
@@ -587,17 +605,17 @@
 					srv_massage_title: "Masajes relajantes",
 					srv_massage_desc:
 						"Terapia de cuerpo completo usando aceites esenciales puros y técnicas suecas para liberar tensión.",
-					srv_facial_title: "Faciales",
+					srv_facial_title: "Facial rejuvenecedor",
 					srv_facial_desc:
-						"Cuidado profundo de la piel con extractos botánicos que devuelven la luminosidad natural.",
-					srv_zen_title: "Faciales rejuvenecedores",
+						"Tratamiento avanzado que restaura la firmeza y luminosidad de tu piel, reduciendo signos de fatiga y paso del tiempo.",
+					srv_zen_title: "Conoterapia",
 					srv_zen_desc:
-						"Una experiencia completa que incluye exfoliación, envoltura corporal e hidroterapia.",
+						"Limpieza natural y profunda de oídos con técnica ancestral para mejorar tu audición y bienestar general.",
 					book_now: "Reservar ahora",
 					view_all_services: "Ver todos los servicios",
 					fac_title: "Nuestras Instalaciones",
 					fac_desc:
-						"Hemos cuidado cada detalle para crear un ambiente donde el tiempo se detiene. Disfruta de nuestras cabinas privadas, zona de hidroterapia y sauna de madera natural.",
+						"Hemos cuidado cada detalle para crear un ambiente donde el tiempo se detiene.",
 					fac_feat1: "✓ Té de cortesía",
 					fac_feat2: "✓ Ambiente zen",
 					fac_feat3: "✓ Manos de profesionales",
@@ -644,6 +662,9 @@
 						'Desarrollado por <a href="https://devdiazlabs.com/" target="_blank" class="dev-link">DevDiaz Labs</a>',
 					floating_cta: "Agenda ahora",
 					view_on_maps: "Ver en Google Maps",
+					wa_form_intro: "Hola, soy [nombre]. Me gustaría solicitar una reserva para el siguiente servicio:",
+					wa_form_contact: "Mis datos de contacto adicionales:",
+					form_error: "Por favor, completa tu nombre y selecciona un servicio.",
 				},
 				en: {
 					nav_services: "Services",
@@ -663,17 +684,17 @@
 					srv_massage_title: "Relaxing Massages",
 					srv_massage_desc:
 						"Full body therapy using pure essential oils and Swedish techniques to release tension.",
-					srv_facial_title: "Facials",
+					srv_facial_title: "Rejuvenating Facial",
 					srv_facial_desc:
-						"Deep skin care with botanical extracts that restore natural radiance.",
-					srv_zen_title: "Rejuvenating Facials",
+						"Advanced treatment that restores your skin's firmness and radiance, reducing signs of fatigue and age.",
+					srv_zen_title: "Conotherapy",
 					srv_zen_desc:
-						"A complete experience including exfoliation, body wrap, and hydrotherapy.",
+						"Natural and deep ear cleaning with an ancestral technique to improve your hearing and general well-being.",
 					book_now: "Book now",
 					view_all_services: "View all services",
 					fac_title: "Our Facilities",
 					fac_desc:
-						"We have taken care of every detail to create an environment where time stands still. Enjoy our private cabins, hydrotherapy area, and natural wood sauna.",
+						"We have taken care of every detail to create an environment where time stands still.",
 					fac_feat1: "✓ Complimentary tea",
 					fac_feat2: "✓ Zen atmosphere",
 					fac_feat3: "✓ Professional hands",
@@ -720,6 +741,9 @@
 						'Developed by <a href="https://devdiazlabs.com/" target="_blank" class="dev-link">DevDiaz Labs</a>',
 					floating_cta: "Book Now",
 					view_on_maps: "View on Google Maps",
+					wa_form_intro: "Hello, I am [nombre]. I would like to request a booking for the following service:",
+					wa_form_contact: "My additional contact details:",
+					form_error: "Please complete your name and select a service.",
 				},
 			};
 
@@ -732,6 +756,7 @@
 					document.getElementById("current-lang");
 
 				const applyLanguage = (lang: string) => {
+					localStorage.setItem("boho_lang", lang);
 					if (!translations[lang]) return;
 
 					// Change inner HTML
@@ -849,6 +874,45 @@
 						}
 					}
 				});
+
+				// Form Submission Logic
+				const bookingSubmitBtn = document.getElementById("booking-submit");
+				const bookingName = document.getElementById("booking-name") as HTMLInputElement;
+				const bookingEmail = document.getElementById("booking-email") as HTMLInputElement;
+				const bookingPhone = document.getElementById("booking-phone") as HTMLInputElement;
+				const bookingService = document.getElementById("booking-service") as HTMLSelectElement;
+
+				if (bookingSubmitBtn) {
+					bookingSubmitBtn.addEventListener("click", () => {
+						const nameValue = bookingName.value.trim();
+						const serviceValue = bookingService.options[bookingService.selectedIndex].text;
+						const emailValue = bookingEmail.value.trim();
+						const phoneValue = bookingPhone.value.trim();
+						const lang = localStorage.getItem("boho_lang") || "es";
+
+						if (!nameValue || bookingService.value === "") {
+							alert(translations[lang].form_error);
+							return;
+						}
+
+						const intro = translations[lang].wa_form_intro.replace("[nombre]", nameValue);
+						let contactInfo = "";
+						if (emailValue || phoneValue) {
+							contactInfo = `\n\n${translations[lang].wa_form_contact}`;
+							if (emailValue) contactInfo += `\n- Email: ${emailValue}`;
+							if (phoneValue) contactInfo += `\n- Tel: ${phoneValue}`;
+						}
+
+						const message = `${intro}\n\n- ${serviceValue}${contactInfo}`;
+						const encodedMsg = encodeURIComponent(message);
+						const waNumber = "523221686720";
+						window.open(`https://wa.me/${waNumber}?text=${encodedMsg}`, "_blank");
+					});
+				}
+
+				// Initialize language from localStorage or default to ES
+				const savedLang = localStorage.getItem("boho_lang") || "es";
+				applyLanguage(savedLang);
 			});
 		</script>
 	</body>
@@ -1540,15 +1604,49 @@
 		right: 30px;
 		background-color: var(--color-accent);
 		color: var(--color-white);
-		padding: 1rem 1.5rem;
-		border-radius: 30px;
+		padding: 1rem 1.8rem;
+		border-radius: 50px;
 		font-weight: 600;
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3);
 		z-index: 1000;
-		transition:
-			transform 0.3s ease,
-			background-color 0.3s ease;
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		text-decoration: none;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		animation: pulse-aura 3s infinite;
 	}
+
+	.cta-icon {
+		flex-shrink: 0;
+	}
+
+	@media (max-width: 768px) {
+		.floating-cta {
+			bottom: 20px;
+			right: 20px;
+			padding: 0.7rem 1.2rem;
+			font-size: 0.9rem;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		}
+		.cta-icon {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	@keyframes pulse-aura {
+		0% {
+			box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.4);
+		}
+		70% {
+			box-shadow: 0 0 0 15px rgba(212, 163, 115, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 0 rgba(212, 163, 115, 0);
+		}
+	}
+
 
 	:global(.dev-link) {
 		position: relative;
