@@ -137,7 +137,7 @@
 				<div class="grid services-grid">
 					<div class="card service-card">
 						<img
-							src="/images/spa_massage.png"
+							src="/images/masaje%20relajante.webp"
 							alt="Masaje Relajante"
 						/>
 						<div class="card-content">
@@ -161,7 +161,7 @@
 					</div>
 					<div class="card service-card">
 						<img
-							src="/images/spa_facial.png"
+							src="/images/facial-rejuvenecedor.webp"
 							alt="Tratamiento Facial"
 						/>
 						<div class="card-content">
@@ -182,7 +182,7 @@
 						</div>
 					</div>
 					<div class="card service-card">
-						<img src="/images/spa_hero.png" alt="Ritual Zen" />
+						<img src="/images/conoterapia.webp" alt="Conoterapia" />
 						<div class="card-content">
 							<h3 data-i18n="srv_zen_title">Conoterapia</h3>
 							<p
@@ -1294,6 +1294,9 @@
 		background: var(--color-white);
 		border-radius: 12px;
 		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 		transition:
 			transform 0.3s ease,
@@ -1305,11 +1308,19 @@
 	}
 	.card img {
 		width: 100%;
-		height: 250px;
+		height: 280px;
 		object-fit: cover;
+		display: block;
 	}
 	.card-content {
-		padding: 2rem;
+		padding: 2.2rem 2rem;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.card-content a.btn-outline-primary {
+		margin-top: auto;
 	}
 	.card-content h3 {
 		font-size: 1.5rem;
